@@ -62,7 +62,7 @@ dataframes.
 """
 
 # Load 150k file into pandas dataframe
-wine150k = pd.read_csv('/Users/Matt/Desktop/DataScience/TextPractice/WineReviews/winemag-data_first150k.csv')
+wine150k = pd.read_csv('/Users/Matt/Desktop/Programming/DataScience/TextPractice/WineReviews/winemag-data_first150k.csv')
 
 # remove quotations marks for all description records
 wine150k['description'] = wine150k['description'].apply(lambda row: row.replace('"', ''))
@@ -71,7 +71,7 @@ wine150k['description'] = wine150k['description'].apply(lambda row: row.replace(
 
 
 # Load 130k file into pandas dataframe
-wine130k = pd.read_csv('/Users/Matt/Desktop/DataScience/TextPractice/WineReviews/winemag-data_130k_v2.csv')
+wine130k = pd.read_csv('/Users/Matt/Desktop/Programming/DataScience/TextPractice/WineReviews/winemag-data_130k_v2.csv')
 
 # remove quotations marks for all description records
 wine130k['description'] = wine130k['description'].apply(lambda row: row.replace('"', ''))
@@ -230,7 +230,7 @@ import re
 
 df92 = wine_combined[wine_combined.description.str.contains("92")].copy()
 df92['description'] = df92.description.str.replace(r'[0-9]+[-]?[‚Äì]?[0-9]+', '')
-df92.to_csv(r'/Users/Matt/Desktop/DataScience/TextPractice/WineReviews/test.csv', index=False)
+df92.to_csv(r'/Users/Matt/Desktop/Programming/DataScience/TextPractice/WineReviews/test.csv', index=False)
 df92.description.str.findall(r'[0-9]+[-][0-9]+')
 
 
